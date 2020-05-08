@@ -6,17 +6,18 @@ services:
 
 env:
   global:
-  - secure: DfoxWwhlCav1zQy51XXflzeRcU1S98qVnYlZGcbYd8ESCq9UtL+kAdsObaCQ5D1iEP9Ftti4mjUCtlVV1bPhI5r2J7EqJ0GOfTGn5GDVFwMhcpC7bQ0udlmEAAJHzZiEfnxjY/SfTONT8V8DyZWr1vKlbnUkDRsPnO1umnAagFofBZtZKIQeHTrR5ycGNQV+ELB8l8vetPo2mdgYvGefvMYbkorjeyBy9UyDOLKb9Em+raFVvg94zh1aYGTvINVEwfPTum7nR6EGFjlcUzVHA6ey8zagt0vN7y110fODn6tmaoU8Hmz77yHSl7Omus6kZ2oz05NzrtZsXGQrWgKoMvrYhCOBy2Q6WeNgjkezmT5pFpnR3aIMlqCFpb9Mbv+Vl18U2yQqcjs/y4kjgOGW4LO02zYN6HWxivApIllp8UenflCPMuOrXiQbqmcssIR5PsqwBm+GJw8Wd6YIJwH5sFDDYblGlfUQMyJk4P2oJ7g248lZbJEVZ/w8P4h6KTtM9HxYmvf9dCgpD4vSY09+5E437UKvfnYLTggARFWJ05vwM3HvpJ1lbI5S5nNCG1ysD1h9evAFTWFrSHxTPjkQ2JXrv98qBGTyNeo8T6SmFwMh4ZCdWFI/gC7YtgLEdryGROKJEbrxgVFIPw80oV7OGe9sRmGtj4jym2TsbJ75Abc=
-  - secure: dBr+lTCySkrwLJ9ddvv1gTRu0Z6S8cfUX4JAztLaojIKZj4YBwQP+G23wcfLsDcHwfsmhwiQW5R/xeRj08FYOCTjgjUktHp44DQ0zgCRvGsv0BMtg6XdRi8QJLDLFkgiOo/tvKtubgxivF/GVu4rb9a9bWmAzVWpJKYCEp0hhEiY+/6+O+lVqZxiA6ca5Z7vQs460DOtnlirG9Tjk59z+MJWlEpCsH67T8tsyrV/0t6s89WgovVwPEXfgepE380rx4cPWu6rwdanZKvR+xZMeHF2TZUZfEH5/TWDEUCGl80QK1OBhu8Y0rcvnWqHsNKxDx7zDifqFM2hn0AX59s6rd9rOfGxMAQTiGJOaadgUCTM6utKAXiQpgErzC2TH8eEtZcCeigw7GzkCGepqfoJSoAiuHA9pIWmEHBSdr9m1baPbPEEcg/rggjjHXApJwbZbYKtMxKRVntaksh43gUEX+mZdqJI/MzOQbXp0w88bk8MlsELs+eB0F+PzGDPFvV2jpCZKAh9dT9DXwkwtYbTpKV9ICfSDexa4eEB6VmSk4Eas75wYNXfMbH9KHMWeHDkEyaCVi4LC8rmnlVwEmxHMMD0BUU5/QX3oZ6x3gIA3Qs0mtw7PoDeZUaSSviQDaF/8EnB822By8EVd31Ycw5kap42ZDirbNNigBiZ8GEi5XQ=
+  - secure: L1TVr/R9ZeMI3bW2nx/yZQBKqFapjyCjRQo8KTcqlKOKLu5btWGYROqsH7tVAjocPhW8FzzD2SJCGe/RG1TFwjDYpU6OZsApUYO0hUfEng94lOApLq4Irnjny369wOEiJ+9kpLJs2dV2x6tXl1jQnzgsrcTueepFxqU8engX2FZ/7+slm9IPC14Y+6cJfvrE5Wq4ZNCa3fucCxPLH5SfNI94AaPvOeHW5p/DlsMaF3x3Due+nMw7YfUBcgitNCrM92lqUVcmsWm0XKdi2AoXiIp+TdPfyFi0fnqOR5+TWTMqxV2fTUmHRUUhlM2U1jKt4l7UeAJsDhRXZj/92N3dP0hTNvhCN5oF6gBt5rou2AXQRCG3FG36odRUoLvJrPs4poKgMMffGcPogU/ToS8KKG3zUIgf6iYkO6fedkfGAiisLRI7UGp2vZip9XbajmbZsxWVyGKzP9qT5tQeCTaJvPD0w9KJ8C+aaAMvdlUYlhCM0YmW7NiurvVQbQD0NzcYkMn3nnK20zduPe6/Gpp6s6jHQcHzO260JU2yR1FttSSBuAQNDm7EBBBxYHebdXpdKWaBWp1+JNLnvV60Mmq4ROy5giuHlBFBAlcogks/dqHQKN/mxD/jMYOpUzsqP9MD8xm1D/nH6toZqhGIKcqZLFDY+APsAg6tYcsWH7qBdP4=
+  - secure: QXKPP7+Ktit/LtBCV27vbPhAB6DLfbhMIfnn2D92wT9XJXOqvwg9EafdDCusQp9aJoWePPS60y4NE/vqfWVIfPxcFfmQHkdtGH6YzPU1bfpbzMv7Tr/DtUhw3uviFzd5pOlusq6gtsAgBbYjTAK0RSTZPSDST1N2m/HTTLTlmCyNfVtdjdaAYyz6J0M6EtSEKvwSqYMW9JHVqHJroO7VS9X/Pyj9/Wocvxl5s4pfYofr0wGRG7zxxZ5dVRikatxuIvDhGyYydhYEG8XJ5a2RuuNKTj8qrAC6kus+lIASFrN/FEgPUO8K/BwMoBrS5R8EjQeLRT2FuUl86oiJ/YXdi/wDl+L5KspDWxOfUwxbCVIFbqi9BdGDBnWHl6N1pcKmW+pe5mcu2gzcEdOgZJCjgAkoKno/nhE2ew77KRqjOeh5SRPqLO1KMtxt7Ixos+ZIAFxookARF7UO0rydbBLOF5D2mBP/SP8E5r6xivTSOrovd34l0juUKMggudMmD1OmAcmp0qFqQSnQghx/dAw5B1oOMlv6qw9i85tW9xEImpuFacNTal05tGPCreb6N2FVg5qLw0toJSD+2gQRxXqhFbgD//HvEhsGAWc/anhg+2PQTSwSEeUoccBD/5FC6SjecZmQ6Pzyq64nYckbGYo/92zWO520VoZzjGq6UEvrbKo=
+
 
 before_install:
 - docker build -t seo80/seo80-docker-repo .
+
 script:
 - docker run --rm seo80/seo80-docker-repo ./gradlew clean jar
 
 stages:
 - coverage
-# - build_ui
 - deploy
 jobs:
   include:
@@ -89,22 +90,12 @@ jobs:
     - COVERAGE_VALUE=0.24
     - GRADLE_CHECK="COVERAGE=$COVERAGE_VALUE ./gradlew -p ./monolithic/repository/user
       check"
-  # - stage: build_ui
-  #   name: Build monolithic-ui JAVA 9
-  #   install: skip
-  #   script:
-  #   - docker run --rm seo80/seo80-docker-repo /bin/bash -c "$GRADLE_CHECK"
-  #   - docker images
-  #   env:
-  #   - JDK_USED=8
-  #   - COVERAGE_VALUE=0.5
-  #   - GRADLE_CHECK="COVERAGE=$COVERAGE_VALUE ./gradlew -p ./monolithic/ui packageToContainer"
   - stage: deploy
     name: Deploy JAVA 8
     install: skip
     script: skip
     deploy:
       provider: script
-      script: ./scripts/deploy.sh
+      script: "./scripts/deploy.sh"
       on:
         branch: master
