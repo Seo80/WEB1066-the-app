@@ -94,13 +94,8 @@ jobs:
       check"
   - stage: deploy
     name: Deploy JAVA 9
-    install:
-      - docker build -t seo80/seo80-docker-repo:jdk$JDK_USED --build-arg JDK_VERSION="openjdk:$JDK_USED" .      
-    script:
-      - docker run seo80/seo80-docker-repo:jdk$JDK_USED /bin/bash -c "$GRADLE_CHECK"
-      env:
-        - JDK_USED=9
-        - GRADLE_CHECK="./gradlew -p ./monolithic/ui packageToContainer"
+    install: skip   
+    script: skip
     deploy:
       provider: script
       script: bash -c "echo \"${DOCKER_PASSWORD}\" | docker login --username \"${DOCKER_LOGIN}\" --password-stdin"
