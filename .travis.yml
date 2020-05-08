@@ -89,14 +89,14 @@ jobs:
     - docker run --rm seo80/seo80-docker-repo:jdk$JDK_USED /bin/bash -c "$GRADLE_CHECK"
     env:
     - JDK_USED=9
-    - COVERAGE_VALUE=0.24
+    - COVERAGE_VALUE=0.21
     - GRADLE_CHECK="COVERAGE=$COVERAGE_VALUE ./gradlew -p ./monolithic/repository/user
       check"
   - stage: deploy
     name: Deploy JAVA 9
-    install: skip
+    install:
+      - docker build -t seo80/seo80-docker-repo:jdk$JDK_USED --build-arg JDK_VERSION="openjdk:$JDK_USED" .      
     script:
-      - docker build -t seo80/seo80-docker-repo:jdk$JDK_USED --build-arg JDK_VERSION="openjdk:$JDK_USED" .
       - docker run seo80/seo80-docker-repo:jdk$JDK_USED /bin/bash -c "$GRADLE_CHECK"
       env:
         - JDK_USED=9
