@@ -12,11 +12,10 @@ env:
   - secure: dBr+lTCySkrwLJ9ddvv1gTRu0Z6S8cfUX4JAztLaojIKZj4YBwQP+G23wcfLsDcHwfsmhwiQW5R/xeRj08FYOCTjgjUktHp44DQ0zgCRvGsv0BMtg6XdRi8QJLDLFkgiOo/tvKtubgxivF/GVu4rb9a9bWmAzVWpJKYCEp0hhEiY+/6+O+lVqZxiA6ca5Z7vQs460DOtnlirG9Tjk59z+MJWlEpCsH67T8tsyrV/0t6s89WgovVwPEXfgepE380rx4cPWu6rwdanZKvR+xZMeHF2TZUZfEH5/TWDEUCGl80QK1OBhu8Y0rcvnWqHsNKxDx7zDifqFM2hn0AX59s6rd9rOfGxMAQTiGJOaadgUCTM6utKAXiQpgErzC2TH8eEtZcCeigw7GzkCGepqfoJSoAiuHA9pIWmEHBSdr9m1baPbPEEcg/rggjjHXApJwbZbYKtMxKRVntaksh43gUEX+mZdqJI/MzOQbXp0w88bk8MlsELs+eB0F+PzGDPFvV2jpCZKAh9dT9DXwkwtYbTpKV9ICfSDexa4eEB6VmSk4Eas75wYNXfMbH9KHMWeHDkEyaCVi4LC8rmnlVwEmxHMMD0BUU5/QX3oZ6x3gIA3Qs0mtw7PoDeZUaSSviQDaF/8EnB822By8EVd31Ycw5kap42ZDirbNNigBiZ8GEi5XQ=
 
 before_install:
-- docker build -t seo80/seo80-docker-repo:jdk$JDK_USED --build-arg JDK_VERSION="openjdk:$JDK_USED"  .
-
+- docker build -t seo80/seo80-docker-repo:jdk$JDK_USED --build-arg JDK_VERSION="openjdk:$JDK_USED"
+  .
 script:
 - docker run --rm seo80/seo80-docker-repo:jdk$JDK_USED ./gradlew clean jar
-
 stages:
 - test
 - coverage
@@ -95,17 +94,11 @@ jobs:
   - stage: deploy
     name: Deploy JAVA 9
     install: skip
-    script:
-      - docker build -t seo80/seo80-docker-repo:jdk$JDK_USED --build-arg JDK_VERSION="openjdk:$JDK_USED" .
-      - docker run seo80/seo80-docker-repo:jdk$JDK_USED /bin/bash -c "$GRADLE_CHECK"
-      env:
-        - JDK_USED=9
-        - GRADLE_CHECK="./gradlew -p ./monolithic/ui packageToContainer"
+    script: skip
     deploy:
       provider: script
-      script: bash -c "echo \"${DOCKER_PASSWORD}\" | docker login --username \"${DOCKER_LOGIN}\" --password-stdin"
-      on:
-        branch: master
+      script: bash -c "echo \"${DOCKER_PASSWORD}\" | docker login --username \"${DOCKER_LOGIN}\"
+        --password-stdin"
   - stage: coverage
     name: Coverage ui-check JAVA 8
     intall: skip
@@ -178,14 +171,8 @@ jobs:
   - stage: deploy
     name: Deploy JAVA 8
     install: skip
-    script:
-      - docker build -t seo80/seo80-docker-repo:jdk$JDK_USED --build-arg JDK_VERSION="openjdk:$JDK_USED" .
-      - docker run seo80/seo80-docker-repo:jdk$JDK_USED /bin/bash -c "$GRADLE_CHECK"
-      env:
-        - JDK_USED=8
-        - GRADLE_CHECK="./gradlew -p ./monolithic/ui packageToContainer"
+    script: skip
     deploy:
       provider: script
-      script: bash -c "echo \"${DOCKER_PASSWORD}\" | docker login --username \"${DOCKER_LOGIN}\" --password-stdin"
-      on:
-        branch: master
+      script: bash -c "echo \"${DOCKER_PASSWORD}\" | docker login --username \"${DOCKER_LOGIN}\"
+        --password-stdin"
