@@ -20,6 +20,7 @@ script:
 stages:
 - test
 - coverage
+- build_ui
 - deploy
 jobs:
   include:
@@ -92,6 +93,16 @@ jobs:
     - COVERAGE_VALUE=0.24
     - GRADLE_CHECK="COVERAGE=$COVERAGE_VALUE ./gradlew -p ./monolithic/repository/user
       check"
+  - stage: build_ui
+    name: Build monolithic-ui JAVA 9
+    install: skip
+    script:
+    - docker run --rm seo80/seo80-docker-repo:jdk$JDK_USED /bin/bash -c "$GRADLE_CHECK"
+    - docker images
+    env:
+    - JDK_USED=9
+    - COVERAGE_VALUE=0.5
+    - GRADLE_CHECK="COVERAGE=$COVERAGE_VALUE ./gradlew -p ./monolithic/ui packageToContainer"
   - stage: deploy
     name: Deploy JAVA 9
     install: skip
@@ -170,6 +181,16 @@ jobs:
     - COVERAGE_VALUE=0.24
     - GRADLE_CHECK="COVERAGE=$COVERAGE_VALUE ./gradlew -p ./monolithic/repository/user
       check"
+  - stage: build_ui
+    name: Build monolithic-ui JAVA 9
+    install: skip
+    script:
+    - docker run --rm seo80/seo80-docker-repo:jdk$JDK_USED /bin/bash -c "$GRADLE_CHECK"
+    - docker images
+    env:
+    - JDK_USED=8
+    - COVERAGE_VALUE=0.5
+    - GRADLE_CHECK="COVERAGE=$COVERAGE_VALUE ./gradlew -p ./monolithic/ui packageToContainer"
   - stage: deploy
     name: Deploy JAVA 8
     install: skip
