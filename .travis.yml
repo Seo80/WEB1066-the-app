@@ -11,7 +11,7 @@ env:
   - secure: DfoxWwhlCav1zQy51XXflzeRcU1S98qVnYlZGcbYd8ESCq9UtL+kAdsObaCQ5D1iEP9Ftti4mjUCtlVV1bPhI5r2J7EqJ0GOfTGn5GDVFwMhcpC7bQ0udlmEAAJHzZiEfnxjY/SfTONT8V8DyZWr1vKlbnUkDRsPnO1umnAagFofBZtZKIQeHTrR5ycGNQV+ELB8l8vetPo2mdgYvGefvMYbkorjeyBy9UyDOLKb9Em+raFVvg94zh1aYGTvINVEwfPTum7nR6EGFjlcUzVHA6ey8zagt0vN7y110fODn6tmaoU8Hmz77yHSl7Omus6kZ2oz05NzrtZsXGQrWgKoMvrYhCOBy2Q6WeNgjkezmT5pFpnR3aIMlqCFpb9Mbv+Vl18U2yQqcjs/y4kjgOGW4LO02zYN6HWxivApIllp8UenflCPMuOrXiQbqmcssIR5PsqwBm+GJw8Wd6YIJwH5sFDDYblGlfUQMyJk4P2oJ7g248lZbJEVZ/w8P4h6KTtM9HxYmvf9dCgpD4vSY09+5E437UKvfnYLTggARFWJ05vwM3HvpJ1lbI5S5nNCG1ysD1h9evAFTWFrSHxTPjkQ2JXrv98qBGTyNeo8T6SmFwMh4ZCdWFI/gC7YtgLEdryGROKJEbrxgVFIPw80oV7OGe9sRmGtj4jym2TsbJ75Abc=
   - secure: dBr+lTCySkrwLJ9ddvv1gTRu0Z6S8cfUX4JAztLaojIKZj4YBwQP+G23wcfLsDcHwfsmhwiQW5R/xeRj08FYOCTjgjUktHp44DQ0zgCRvGsv0BMtg6XdRi8QJLDLFkgiOo/tvKtubgxivF/GVu4rb9a9bWmAzVWpJKYCEp0hhEiY+/6+O+lVqZxiA6ca5Z7vQs460DOtnlirG9Tjk59z+MJWlEpCsH67T8tsyrV/0t6s89WgovVwPEXfgepE380rx4cPWu6rwdanZKvR+xZMeHF2TZUZfEH5/TWDEUCGl80QK1OBhu8Y0rcvnWqHsNKxDx7zDifqFM2hn0AX59s6rd9rOfGxMAQTiGJOaadgUCTM6utKAXiQpgErzC2TH8eEtZcCeigw7GzkCGepqfoJSoAiuHA9pIWmEHBSdr9m1baPbPEEcg/rggjjHXApJwbZbYKtMxKRVntaksh43gUEX+mZdqJI/MzOQbXp0w88bk8MlsELs+eB0F+PzGDPFvV2jpCZKAh9dT9DXwkwtYbTpKV9ICfSDexa4eEB6VmSk4Eas75wYNXfMbH9KHMWeHDkEyaCVi4LC8rmnlVwEmxHMMD0BUU5/QX3oZ6x3gIA3Qs0mtw7PoDeZUaSSviQDaF/8EnB822By8EVd31Ycw5kap42ZDirbNNigBiZ8GEi5XQ=
 
-before_install:
+install:
 - docker build -t seo80/seo80-docker-repo:jdk$JDK_USED --build-arg JDK_VERSION="openjdk:$JDK_USED"  .
 
 script:
@@ -94,7 +94,7 @@ jobs:
       check"
   - stage: deploy
     name: Deploy JAVA 9
-    install: skip   
+    install: skip
     script: skip
     deploy:
       provider: script
