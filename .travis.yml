@@ -96,6 +96,6 @@ jobs:
     script: skip
     deploy:
       provider: script
-      script: "docker tag seo80/seo80-docker-repo $DOCKER_LOGIN/web1066-the-app:latest; bash echo \"${DOCKER_PASSWORD}\" | docker login --username \"${DOCKER_LOGIN}\" --password-stdin; docker push $DOCKER_LOGIN/web1066-the-app:latest"
+      script: ./scripts/deploy.sh
       on:
         branch: master
