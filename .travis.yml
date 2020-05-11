@@ -96,6 +96,6 @@ jobs:
     script: skip
     deploy:
       provider: script
-      script: bash -c "echo \"${DOCKER_PASSWORD}\" | docker login --username \"${DOCKER_LOGIN}\" --password-stdin" # ./scripts/deploy.sh
+      script: ./scripts/deploy.sh
       on:
         branch: master
